@@ -16,7 +16,24 @@ app.set('views', 'views');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {
+        title: "Main",
+        isHome: true
+    });
+});
+
+app.get('/courses', (req, res) => {
+    res.render('courses', {
+        title: 'Courses',
+        isCourses: true
+    });
+});
+
+app.get('/add', (req, res) => {
+    res.render('add', {
+        title: 'Add course',
+        isAdd: true
+    });
 });
 
 

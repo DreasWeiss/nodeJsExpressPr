@@ -3,17 +3,23 @@
         <a href="#" class="brand-logo">Courses App</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             
-            <li>
-                <a href="/">Main</a>
-            </li>
+            {{#if isHome}}
+                <li class="active"> <a href="/">Main</a> </li>
+            {{else}}
+                <li> <a href="/">Main</a> </li>
+            {{/if}}
+
+            {{#if isCourses}}
+                <li class="active"> <a href="/courses">Courses</a> </li>
+            {{else}}
+                <li> <a href="/courses">Courses</a> </li>
+            {{/if}}
             
-            <li>
-                <a href="/courses">Courses</a>
-            </li>
-            
-            <li>
-                <a href="/add">Add course</a>
-            </li>
+            {{#if isAdd}}
+                <li class="active"> <a href="/add">Add course</a> </li>
+            {{else}}
+                <li> <a href="/add">Add course</a> </li>
+            {{/if}}
 
         </ul>
     </div>
