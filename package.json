@@ -1,13 +1,14 @@
 {
   "name": "nodejsexpress",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projec for udemy nodejs course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dreas Weiss <dreasweiss@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
   },
