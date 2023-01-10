@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const p = path.join(__dirname,'..','data','cart.json');
+const p = path.join(require.main.path,'data','cart.json');
 
 class Cart {
 
