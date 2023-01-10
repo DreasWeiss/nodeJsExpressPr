@@ -16,11 +16,15 @@
                 <a href="/courses/{{id}}" target="_blank">Open course</a>
                 <a href="/courses/{{id}}/edit?allow=true">Edit course</a>
                 <form action="/cart/add" method="post">
-                    <input type="hidden" name="id" value="{{course.id}}">
+                    <input type="hidden" name="id" value="{{id}}">
                     <button type="submit" class="btn btn-primary">
                         Add to cart
                     </button>
                 </form>
+                 <form action="/cart/add" method="POST">
+          <input type="hidden" name="id" value="{{id}}">
+          <button type="submit" class="btn btn-primary">Купить</button>
+        </form>
             </div>
         </div>
     </div>
