@@ -17,7 +17,6 @@ class Cart {
             cart.courses[idx] = candidate;
         } else {
             // need to  be added
-            console.log(course);
             course.count = 1;
             cart.courses.push(course);
         }
