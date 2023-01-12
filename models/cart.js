@@ -42,7 +42,7 @@ class Cart {
 
         if (course.count === 1) {
             // have to delete this course from the cart
-            cart.courses = cart.courses.filter(c => c.id === id);
+            cart.courses = cart.courses.filter(c => c.id !== id);
         } else {
             // cange the number of same courses in cart
             cart.courses[idx].count--;
