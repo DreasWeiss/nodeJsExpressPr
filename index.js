@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
+
 const exphbs = require('express-handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+
 const path = require('path');
 const mongoose = require('mongoose');
 const homeRoutes = require('./routes/home');
@@ -11,9 +14,13 @@ const cartRoutes = require('./routes/cart');
 const app = express();
 
 const hbs = exphbs.create({
-    defaultLayout: 'main',
-    extname: 'hbs'
-});
+    defaultLayout: "main",
+    extname: "hbs",
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
+  });
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
