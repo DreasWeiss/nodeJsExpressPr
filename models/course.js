@@ -6,7 +6,7 @@ const course = new Schema({
         required: true
     },
     price: {
-        type: String,
+        type: Number,
         required: true
     },
     img: String
