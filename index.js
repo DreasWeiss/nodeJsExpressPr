@@ -36,7 +36,7 @@ app.use('/cart', cartRoutes);
 
 async function start() {
     try {
-        const mongoDbUri = `mongodb+srv://${process.env.MONGODBUSER}:${process.env.MONGODBPSW}@cluster0.7t8l1ua.mongodb.net/?retryWrites=true&w=majority`;
+        const mongoDbUri = `mongodb+srv://${process.env.MONGODBUSER}:${process.env.MONGODBPSW}@cluster0.7t8l1ua.mongodb.net/shop`;
         await mongoose.connect(mongoDbUri);
 
         const port = process.env.PORT || 3000;
