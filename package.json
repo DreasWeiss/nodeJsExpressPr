@@ -10,8 +10,10 @@
   "author": "Dreas Weiss <dreasweiss@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
+    "mongoose": "^6.8.4",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
