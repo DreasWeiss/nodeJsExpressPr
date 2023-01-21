@@ -32,3 +32,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.course-form{
+    margin-bottom: 20px;
+}
