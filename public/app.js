@@ -3,7 +3,7 @@ const toCurrency = price => {
         currency: 'eur',
         style: 'currency'
     }).format(price);
-}
+};
 
 document.querySelectorAll('.price').forEach(node => {
     node.textContent = toCurrency(node.textContent);
