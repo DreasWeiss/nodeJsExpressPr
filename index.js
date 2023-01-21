@@ -37,12 +37,14 @@ app.use('/cart', cartRoutes);
 async function start() {
     try {
         const mongoDbUri = `mongodb+srv://${process.env.MONGODBUSER}:${process.env.MONGODBPSW}@cluster0.7t8l1ua.mongodb.net/shop`;
+        mongoose.set('strictQuery', true);
         await mongoose.connect(mongoDbUri);
+        console.log('Successfuly connected to the data base :)))');
 
         const port = process.env.PORT || 3000;
         const listener = app.listen(port, () => {
             console.log(
-                `App is listening on port: ${port} \n http://localhost:${port}`
+                `App is listening on port: ${port} \n http://localhost:${port} \n Let's rock!`
             );
         });
 
