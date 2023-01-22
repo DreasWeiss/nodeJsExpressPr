@@ -1,4 +1,4 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const Course = require('../models/course');
 const router = Router();
 
@@ -43,7 +43,7 @@ router.post('/remove', async (req, res) => {
 });
 
 router.post('/edit', async (req, res) => {
-    const {id} = req.body;
+    const { id } = req.body;
     delete req.body.id;
     await Course.findByIdAndUpdate(id, req.body);
     res.redirect('/courses');
